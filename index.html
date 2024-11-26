@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novidades do Jogo</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #4f73d7;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-bottom: 4px solid #3b5bb8;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin: 0;
+            animation: fadeIn 2s ease-out;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            font-weight: 400;
+        }
+
+        section {
+            margin: 30px;
+            padding: 25px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-top: 20px;
+            color: #e17055;
+            font-weight: 600;
+            animation: slideIn 1s ease-out;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
+            transition: all 0.3s ease-in-out;
+        }
+
+        li:hover {
+            color: #4f73d7;
+        }
+
+        li .item-title {
+            font-weight: bold;
+            color: #0984e3;
+            margin-left: 15px;
+            font-size: 1.1em;
+        }
+
+        li .item-description {
+            font-size: 1em;
+            color: #636e72;
+            margin-left: 20px;
+        }
+
+        .card {
+            background-color: #ecf0f1;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #2d3436;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #4f73d7;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 1.2em;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #3b5bb8;
+            transform: scale(1.05);
+        }
+
+        .icon {
+            margin-right: 15px;
+            font-size: 2.5em;
+            color: #0984e3;
+        }
+
+        .dragon-icon {
+            width: 3em;
+            height: auto;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Animations for Scroll */
+        .fade-in-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-out;
+        }
+
+        .fade-in-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Floating animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Novidades do Jogo</h1>
+        <p>Descubra os novos recursos, armas e animações incríveis!</p>
+    </header>
+
+        <section>
+            <h2><i class="fas fa-dragon"></i> Rework do Dragão</h2>
+            <div class="card fade-in-on-scroll">
+                <h3>Dragão Renovado</h3>
+                <p>O dragão foi completamente refeito! Agora com novas animações e habilidades melhoradas para uma experiência ainda mais emocionante.</p>
+            </div>
+
+        <h2><i class="fas fa-bolt icon"></i> Armas Renovadas</h2>
+        <ul>
+            <li class="fade-in-on-scroll">
+                <i class="fas fa-slingshot icon"></i>
+                <span class="item-title">Slingshot (Estilingue)</span>
+                <p class="item-description">Novo modelo e animação. Habilidade Z: Bomba de tinta que prende o oponente com tentáculos.</p>
+            </li>
+            <li class="fade-in-on-scroll">
+                <i class="fas fa-crosshairs icon"></i>
+                <span class="item-title">Musket (Mosquete)</span>
+                <p class="item-description">Nova modelagem e animações. Habilidade Z: Dispara um "Draconic Bullet" de longo alcance.</p>
+            </li>
+            <li class="fade-in-on-scroll">
+                <i class="fas fa-bullhorn icon"></i>
+                <span class="item-title">Flint Lock</span>
+                <p class="item-description">Novo design com habilidades como "Concentrated Shot" e "Marksman's Fury".</p>
+            </li>
+            <li class="fade-in-on-scroll">
+                <i class="fas fa-cogs icon"></i>
+                <span class="item-title">Magma Blaster</span>
+                <p class="item-description">Substitui o Musquete Refinado com disparos de espingarda. Habilidades Z e X incluem "Scorching Burst" e "Magmatic Pressure".</p>
+            </li>
+        </ul>
+
+        <h2><i class="fas fa-guitar icon"></i> Melhoria nas Animações</h2>
+        <div class="card fade-in-on-scroll">
+            <h3>Novos Modelos e Animações</h3>
+            <p>Todos os itens, incluindo armas e habilidades, receberam animações aprimoradas para uma jogabilidade mais fluida e impactante.</p>
+        </div>
+
+        <h2><i class="fas fa-box icon"></i> Outras Armas e Características</h2>
+        <ul>
+            <li class="fade-in-on-scroll">
+                <i class="fas fa-bomb icon"></i>
+                <span class="item-title">Bazooka</span>
+                <p class="item-description">Habilidades "Heatwave" e "Flaring Missiles" com rastreamento de alvos próximos.</p>
+            </li>
+            <li class="fade-in-on-scroll">
+                <i class="fas fa-headphones-alt icon"></i>
+                <span class="item-title">Skull Guitar</span>
+                <p class="item-description">Novo design com animações de ataques M1 e habilidades como "Echoing Notes" e "Dead Beat".</p>
+            </li>
+        </ul>
+
+        <a href="https://youtu.be/Td_fopHUltA?si=kgxMSRvCrsoUJLsA" class="btn" target="_blank">Descubra mais</a>
+    </section>
+
+    <script>
+        // Scroll animations
+        const fadeElements = document.querySelectorAll('.fade-in-on-scroll');
+
+        function checkScroll() {
+            fadeElements.forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkScroll);
+        checkScroll();
+    </script>
+</body>
+</html>
